@@ -377,7 +377,7 @@ var appRoutes = [
     { path: "timesheet", component: __WEBPACK_IMPORTED_MODULE_9__timesheet_timesheet_component__["a" /* TimesheetComponent */] },
     { path: "projects", component: __WEBPACK_IMPORTED_MODULE_10__projects_projects_component__["a" /* ProjectsComponent */] },
     { path: "profile", component: __WEBPACK_IMPORTED_MODULE_11__profile_profile_component__["a" /* ProfileComponent */] },
-    { path: "settings", component: __WEBPACK_IMPORTED_MODULE_12__settings_settings_component__["a" /* SettingsComponent */] },
+    { path: "settings", component: __WEBPACK_IMPORTED_MODULE_12__settings_settings_component__["a" /* SettingsComponent */] }
 ];
 var AppModule = (function () {
     function AppModule() {
@@ -400,7 +400,7 @@ var AppModule = (function () {
                 __WEBPACK_IMPORTED_MODULE_2__angular_forms__["FormsModule"],
                 __WEBPACK_IMPORTED_MODULE_2__angular_forms__["ReactiveFormsModule"],
                 __WEBPACK_IMPORTED_MODULE_3__angular_http__["a" /* HttpModule */],
-                __WEBPACK_IMPORTED_MODULE_6__angular_router__["RouterModule"].forRoot(appRoutes),
+                __WEBPACK_IMPORTED_MODULE_6__angular_router__["RouterModule"].forRoot(appRoutes, { useHash: true }),
                 __WEBPACK_IMPORTED_MODULE_14__angular_platform_browser_animations__["a" /* BrowserAnimationsModule */],
                 __WEBPACK_IMPORTED_MODULE_4_primeng_primeng__["MenuModule"],
                 __WEBPACK_IMPORTED_MODULE_4_primeng_primeng__["PanelModule"],
