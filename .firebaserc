@@ -1,5 +1,6 @@
 {
   "projects": {
-    "default": "assingment1-si"
+    "default": "assingment1-si",
+    "graphs": "graphql-bf3d8"
   }
 }
