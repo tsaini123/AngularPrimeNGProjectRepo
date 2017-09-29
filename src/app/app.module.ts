@@ -18,7 +18,9 @@ import { MenuModule, PanelModule, ChartModule,
             GrowlModule, DragDropModule, GalleriaModule } from 'primeng/primeng';
 
 import { AppComponent } from './app.component';
+
 import { RouterModule, Routes } from '@angular/router';
+
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { StatisticComponent } from './statistic/statistic.component';
 import { TimesheetComponent } from './timesheet/timesheet.component';
@@ -27,11 +29,14 @@ import { ProfileComponent } from './profile/profile.component';
 import { SettingsComponent } from './settings/settings.component';
 
 import { AlltimesComponent } from './alltimes/alltimes.component';
+
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 import { FielderrorsComponent } from './fielderrors/fielderrors.component';
 
 
 const appRoutes: Routes = [
+
   { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
   { path: 'dashboard', component: DashboardComponent },
   { path: 'alltimes', component: AlltimesComponent },
@@ -39,6 +44,7 @@ const appRoutes: Routes = [
   { path: 'projects', component: ProjectsComponent },
   { path: 'profile', component: ProfileComponent },
   { path: 'settings', component: SettingsComponent }
+
 ];
 
 @NgModule({
@@ -59,7 +65,9 @@ const appRoutes: Routes = [
     ReactiveFormsModule,
     HttpModule,
     RouterModule.forRoot(appRoutes, { useHash: true }),
+
     ApolloModule.forRoot(provideClient),
+
     BrowserAnimationsModule,
     MenuModule,
     PanelModule,
