@@ -44,5 +44,67 @@
     </p-dataTable>
   
     <p-contextMenu #tableContextMenu [model]="contextMenu"></p-contextMenu>
+    <button pButton label="Add Time" (click)="displayEditDialog = true"></button>
+    
+    
+    <p-dialog header="Add Time" [modal]="true" [(visible)]="displayEditDialog" [ngSwitch]="dialogPageIndex" width="700"
+              height="450">
+              <form [formGroup]="allTimeForm" (ngSubmit)="onSubmit()" class="ui-g">
   
+              <div class="ui-g ui-fluid">
+                <div class="ui-g-12">
+                    <div class="ui-inputgroup">
+                        
+                        <input formControlName="user" type="text" pInputText placeholder="User">         
+                    </div>
+                </div>
+                
+                <div class="ui-g-12">
+                    <div class="ui-inputgroup">
+                       
+                        <input formControlName="project" type="text" pInputText placeholder="Project">   
+  
+                    </div>
+                </div>
+                        
+              
+            </div>
+  
+            <div class="ui-g ui-fluid">
+              <div class="ui-g-12">
+                  <div class="ui-inputgroup">
+                      
+                      <input formControlName="category" type="text" pInputText placeholder="Category">         
+                  </div>
+              </div>
+              
+              <div class="ui-g-12">
+                  <div class="ui-inputgroup">
+                      
+                      <input type="number" formControlName="startTime" pInputText placeholder="Start Time">   
+                      
+                  </div>
+              </div>
+  
+              <div class="ui-g-12">
+                <div class="ui-inputgroup">
+                    
+                    <input type="number" formControlName="endTime" pInputText placeholder="End Time">   
+                    
+                </div>
+            </div>
+                      
+             
+          </div>
+  
+  
+      <p-footer>
+        <button pButton type="submit" label="Save" icon="fa-check" (click)="saveNewEntry()"></button>
+       
+      </p-footer>
+    
+    </form>
+  
+    </p-dialog>
+    
   </div>
