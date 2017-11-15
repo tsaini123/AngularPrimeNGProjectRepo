@@ -1,0 +1,22 @@
+<h1>{{cameraName}}</h1>
+
+<div *ngIf="isStreaming">
+
+  <iframe type="text/html" frameborder="0" width="890" height="500" src="//video.nest.com/embedded/live/rrwzgV?autoplay=1"
+    allowfullscreen></iframe>
+
+</div>
+<div >
+  <p-dataTable [value]="nestCamSnapshots" class="ui-g-12" emptyMessage="No time entries found">
+      <p-column field="image" header="Images" >
+          <ng-template let-nestCamSnaps="rowData" pTemplate="field">
+              <img height="250px" width="350px" src={{nestCamSnaps.image}}>
+          </ng-template>
+      </p-column>
+      <p-column field="cameraName" header="Camera-Name"></p-column>
+      <p-column field="eventDate" header="Event-Date"></p-column>
+
+      
+  </p-dataTable>  
+  
+</div>
